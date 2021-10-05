@@ -1,0 +1,18 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "How are you"],
+      "responses": ["Hey", "Welcome to the nltk chat bot. How can I help you?",
+        "Hello, how can I help you?",
+        "What can I help you with?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later"],
+      "responses": ["See you later, thanks for stopping by.", "Have a wonderful day.",
+      "Hope I resolved your issue today. Have a good day.", "Have a nice day"]
+    }
+  ]
+}
