@@ -1,11 +1,13 @@
 # IPro 497 – Product Direction Document
 
+# Retro:
+* https://retrotool.app/7e050552-6d30-430a-b023-3be9685a0d26
+
 ## Problem statement
 * Teachers frequently take the help of Teachers Assistants to answer common questions, take attendance, and provide learning assistance. Time constraints and workload can often prevent TAs from ensuring adequate support to all students. A virtual assistant will benefit students, professors, and TAs by saving time and providing answers to several frequently asked topics. (NLU)
-* Teachers struggle to keep track of which students are in class, and many of them waste valuable class time taking attendance. Automated procedures can ensure proper efficiency. (maximum teaching time).
 
 ## Customer
-* Students
+* College Students
 
 ## Customer Demographic
 * 18 and above
