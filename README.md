@@ -5,7 +5,7 @@
 * Teachers struggle to keep track of which students are in class, and many of them waste valuable class time taking attendance. Automated procedures can ensure proper efficiency. (maximum teaching time).
 
 ## Customer
-* Students
+* College Students
 
 ## Customer Demographic
 * 18 and above
