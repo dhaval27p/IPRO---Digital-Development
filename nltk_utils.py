@@ -2,7 +2,7 @@ import nltk
 import numpy as np
 from nltk.stem.porter import PorterStemmer
 # Download if you get any error.
-# nltk.download('punkt')
+#nltk.download('punkt')
 stemmer = PorterStemmer()
 
 
