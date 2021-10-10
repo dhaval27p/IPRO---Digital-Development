@@ -1,8 +1,5 @@
 # IPro 497 – Product Direction Document
 
-# Retro:
-* https://retrotool.app/7e050552-6d30-430a-b023-3be9685a0d26
-
 ## Problem statement
 * Teachers frequently take the help of Teachers Assistants to answer common questions, take attendance, and provide learning assistance. Time constraints and workload can often prevent TAs from ensuring adequate support to all students. A virtual assistant will benefit students, professors, and TAs by saving time and providing answers to several frequently asked topics. (NLU)
 
@@ -88,3 +85,13 @@ Dhaval Patel  |  Chicago   |
 * Be nice to each other.
 * If someone does not complete a task they should try to complete it by the next meeting.
 * Before putting up a task in the kanban board, as a group we all should decide on the workload on a scale of 1 - 10. This will ensure that everyone has a task with equal amounts of work.
+
+# Retro:
+* https://retrotool.app/7e050552-6d30-430a-b023-3be9685a0d26
+
+# References
+* https://www.youtube.com/watch?v=8HifpykuTI4
+* https://www.youtube.com/watch?v=RpWeNzfSUHw
+* https://www.youtube.com/watch?v=8qwowmiXANQ
+* https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2
+* https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
