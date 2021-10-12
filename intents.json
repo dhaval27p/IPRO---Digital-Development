@@ -12,6 +12,12 @@
       "Hope I resolved your issue today. Have a good day.", "Have a nice day"]
     },
     {
+      "tag": "satisfy",
+      "patterns": ["Thank you", "Thanks alot", "You the best"],
+      "responses": ["No problem, boss", "It's my job",
+      "You welcome", "Anytime", "Is there anything I can help you with?"]
+    },
+    {
       "tag": "capabilities",
       "patterns": ["What can you help me with", "information", "help"],
       "responses": ["I am able to give you general information about the class such as office hours, the midterm, textbooks, class time, and more", "I can answer questions for you such as: office hours, informationm about the professor, midterm information and more", "I can help with many general questions", "I can provide you with information such as contacting the professor, midterm information, office hours, and more"]
