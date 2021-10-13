@@ -13,9 +13,9 @@
     },
     {
       "tag": "satisfy",
-      "patterns": ["Thank you", "Thanks alot", "You the best"],
+      "patterns": ["Thank you", "Thanks a lot", "You the best"],
       "responses": ["No problem, boss", "It's my job",
-      "You welcome", "Anytime", "Is there anything I can help you with?"]
+      "You're welcome", "Anytime", "Is there anything I can help you with?"]
     },
     {
       "tag": "capabilities",
