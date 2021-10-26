@@ -1,5 +1,27 @@
 {% extends "template.html" %}
-{% block title %} Bot {% endblock %}
+{% block title %} AI ChatBot {% endblock %}
 {% block content %}
-<h4> Test </h4>
+<h4> Test Hello Testing </h4>
+
+
+<style>
+input[type=text] {
+  width: 20%;
+  padding: 15px 20px;
+  margin: 10px 0;
+  box-sizing:border-box;
+}
+</style>
+
+</head>
+<body>
+
+<form>
+  <label for="fname">Input your question: </label>
+  <input type="text" id="fname" name="fname"><br></br>
+  <label for="lname">Answer: </label>
+  <input type="text" id="lname" name="lname" value="hello"readonly>
+</form>
+
+
 {% endblock %}

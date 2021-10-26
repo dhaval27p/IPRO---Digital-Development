@@ -1,8 +1,6 @@
 from flask import Flask, render_template
 
-
 app = Flask(__name__)
-
 
 @app.route("/")
 def home():
@@ -11,6 +9,7 @@ def home():
 
 @app.route("/chat")
 def chat():
+    print("yes")
     return render_template("chat.html")
 
 

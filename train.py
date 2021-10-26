@@ -74,7 +74,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 for epoch in range(num_epochs):
     for (words, labels) in train_loader:
         words = words.to(device)
-        labels = labels.to(device)
+        labels = labels.to(device).type(torch.LongTensor)
 
         # forward
         outputs = model(words)
