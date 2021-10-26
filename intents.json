@@ -23,12 +23,12 @@
       "responses": ["I am able to give you general information about the class such as office hours, the midterm, textbooks, class time, and more", "I can answer questions for you such as: office hours, informationm about the professor, midterm information and more", "I can help with many general questions", "I can provide you with information such as contacting the professor, midterm information, office hours, and more"]
     },
     {
-      "tag": "class_time",
+      "tag": "class time",
       "patterns": ["Class time", "When does class start", "When does class begin"],
       "responses": ["Class starts at 6:45pm CDT and ends at 9:30pm CDT.", "The syllabus states 6:45pm CDT. Click here to view the syllabus https://blackboard.iit.edu/ultra/courses/_117653_1/cl/outline", "It starts at 6:45pm CDT", "Starts at 6:45pm and ends at 9:30pm"]
     },
     {
-      "tag": "office_hours",
+      "tag": "office hours",
       "patterns": ["When is the professor available", "What time are office hours", "Office hours"],
       "responses": ["Monday & Tuesday: 4:00pm CDT - 5:00pm CDT", "4:00pm - 5:00pm on Monday's and Tuesdays ", "Office hours are Monday and Tuesday 4:00pm-5:00pm", "Office hours are Monday & Tuesday 4:00pm - 5:00pm. If you need time outside of these hours, please email the professor at mschray@iit.edu."]
     },
@@ -48,7 +48,7 @@
       "responses": ["There is no required textbook for this class", "No required textbook","A textbook is not required for this course", "No required textbook"]
     },
     {
-      "tag": "contact_professor",
+      "tag": "contact professor",
       "patterns": ["What is the professor's email", "Professor's email", "Email the professor"],
       "responses": ["His email is mschray@iit.edu", "mschray@iit.edu", "Email: mschray@iit.edu", "You may email him at mschray@iit.edu"]
     },
