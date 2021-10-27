@@ -49,19 +49,19 @@
 
 <details>
            <summary>Scenario #1</summary>
-           <p>Mike is having difficulties in his physics class. He gets very confused about the material and tries to reach out to the TA. The TA is overloaded with questions and Mike receives an email from the TA saying that she will respond to all emails as soon as she can. He does not hear back from the TA for 2 days and decides to use the AI TA chat bot to help him understand the material in physics.</p>
+           <p>Mike's physics class is giving him trouble. He becomes very confused by the material and attempts to contact the TA. The TA is swamped with questions, and Mike receives an email from her promising to respond to all emails as soon as she can. Not hearing back after two days, he decides to use the AI chat bot to help him understand the physics material.</p>
          </details>
 
 
 <details>
            <summary>Scenario #2</summary>
-           <p>John has missed a couple of lectures due to covid and now he has fallen back in his course. He also hasn’t had time to attend TA office hours due to having other online classes during that time. So, this allows him to use the AI TA chat bot to get caught up with all questions he needs answered.</p>
+           <p>John has fallen behind in his course after missing a couple of lectures due to COVID. He hasn't been able to attend TA office hours because he is taking other online classes at the same time. As a result, he can use the AI TA chat bot to catch up on some general questions.</p>
          </details>
 
 
 <details>
            <summary>Scenario #3</summary>
-           <p>Professor Wick is feeling a bit sick and needs time off from work. AI assistant chabot can use NLP to scan the document that the professor has uploaded. This will allow an AI assistant to cover the missing lecture that the student may have missed. </p>
+           <p>Professor Wick is ill and needs to take some time off from work. The AI assistant chabot can scan the document that the professor has uploaded using natural language processing (NLP). As a result, an AI assistant will be able to cover the lecture that the student may have missed.</p>
          </details>
 
 
@@ -90,12 +90,5 @@ Dhaval Patel  |  Chicago   |
 * https://retrotool.app/7e050552-6d30-430a-b023-3be9685a0d26
 
 # References/Resources
-* https://www.youtube.com/watch?v=8HifpykuTI4
-* https://www.youtube.com/watch?v=RpWeNzfSUHw
-* https://www.youtube.com/watch?v=8qwowmiXANQ
-* https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2
-* https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
-* Flask Guide: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-* Flask: https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
-* Python with Flask: https://www.youtube.com/watch?v=qbnqNWXf_tU&ab_channel=TechWithTim
-* Bootstrap: https://getbootstrap.com/
+* ML ChatBot with Flask: https://www.youtube.com/watch?v=8HifpykuTI4
+* NLP ChatBot Guide: https://www.youtube.com/watch?v=RpWeNzfSUHw, https://www.youtube.com/watch?v=8qwowmiXANQ, https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2, https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
