@@ -95,9 +95,3 @@ Dhaval Patel  |  Chicago   |
 * https://www.youtube.com/watch?v=8qwowmiXANQ
 * https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2
 * https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
-* Flask Guide: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-* Flask: https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
-* Python with Flask: https://www.youtube.com/watch?v=qbnqNWXf_tU&ab_channel=TechWithTim
-* Bootstrap: https://getbootstrap.com/
-* Google Cloud: https://cloud.google.com/solutions/web-hosting
-* QnA: https://www.qnamaker.ai/
