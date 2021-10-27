@@ -100,3 +100,4 @@ Dhaval Patel  |  Chicago   |
 * Python with Flask: https://www.youtube.com/watch?v=qbnqNWXf_tU&ab_channel=TechWithTim
 * Bootstrap: https://getbootstrap.com/
 * Google Cloud: https://cloud.google.com/solutions/web-hosting
+* QnA: https://www.qnamaker.ai/
