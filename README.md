@@ -92,3 +92,4 @@ Dhaval Patel  |  Chicago   |
 # References/Resources
 * ML ChatBot with Flask: https://www.youtube.com/watch?v=8HifpykuTI4
 * NLP ChatBot Guide: https://www.youtube.com/watch?v=RpWeNzfSUHw, https://www.youtube.com/watch?v=8qwowmiXANQ, https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2, https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
+* Flash to Mysql-https://www.codementor.io/@adityamalviya/python-flask-mysql-connection-rxblpje73 
