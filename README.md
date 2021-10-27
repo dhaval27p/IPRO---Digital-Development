@@ -95,4 +95,5 @@ Dhaval Patel  |  Chicago   |
 * https://www.youtube.com/watch?v=8qwowmiXANQ
 * https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2
 * https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
-* Useful Site for Flask: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+* Flask Guide: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+* Flask: https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
