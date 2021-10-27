@@ -91,7 +91,4 @@ Dhaval Patel  |  Chicago   |
 
 # References/Resources
 * https://www.youtube.com/watch?v=8HifpykuTI4
-* https://www.youtube.com/watch?v=RpWeNzfSUHw
-* https://www.youtube.com/watch?v=8qwowmiXANQ
-* https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2
-* https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
+* NLP ChatBot Guide: https://www.youtube.com/watch?v=RpWeNzfSUHw, https://www.youtube.com/watch?v=8qwowmiXANQ, https://www.youtube.com/watch?v=Da-iHgrmHYg&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=2, https://www.youtube.com/watch?v=k1SzvvFtl4w&list=RDCMUCbXgNpp0jedKWcQiULLbDTA&index=3
