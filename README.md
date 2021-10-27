@@ -99,3 +99,4 @@ Dhaval Patel  |  Chicago   |
 * Flask: https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
 * Python with Flask: https://www.youtube.com/watch?v=qbnqNWXf_tU&ab_channel=TechWithTim
 * Bootstrap: https://getbootstrap.com/
+* Google Cloud: https://cloud.google.com/solutions/web-hosting
