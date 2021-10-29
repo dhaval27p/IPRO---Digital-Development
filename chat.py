@@ -22,14 +22,11 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-# creating chat
+# Implementing Bot Response Function
 
-bot_name = "Kabir"
-print("Let's chat! type 'quit' to exit")
-while True:
-    sentence = input('You: ')
-    if sentence == "quit":
-        break
+
+def bot(msg):
+    sentence = msg
 
     sentence = tokenize(sentence)
     x = bag_of_words(sentence, all_words)
@@ -47,7 +44,8 @@ while True:
     if prob.item() > .75:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                print(f'{bot_name}: {random.choice(intent["responses"])}')
-
+                x = random.choice(intent["responses"])
+                return x
     else:
-        print(f'{bot_name}: I do not understand...')
+        default = "I do not understand your question?"
+        return default

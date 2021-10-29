@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, jsonify
+from chat import bot
 
 app = Flask(__name__)
 
@@ -8,21 +9,15 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/chat", methods=["POST", "GET"])
-def chat():
-    print("yes")
-    return render_template("chat.html")
-
-@app.route("/login", methods=["POST", "GET"])
-def login():
-    if request.method == "POST":
-        user = request.form["username"]
-        return redirect(url_for("user", usr=user))
+@app.route('/chat', methods=["GET", "POST"])
+def chatbot():
+    if request.method == 'POST':
+        the_question = request.form['question']
+        response = bot(the_question)
+        return jsonify({"response": response })
     else:
-        return render_template("login.html")
+        return render_template('demo.html')
 
-@app.route('/hi/<usr>')
-def user(usr):
-    return f"<h1>{usr}</h1>"
+
 if __name__ == "__main__":
     app.run(debug=True)
