@@ -3,6 +3,13 @@
 {% block content %}
 <h2> Python Flask Website For Education Chat Bot </h2>
 <br>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p>{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
 <h6> Have questions about your class? Use this interactive ChatBot to ask many questions. You are able to ask questions about the class and more! Some examples are seen below:</h6>
 <ul>
     <li> What are class times?</li>
