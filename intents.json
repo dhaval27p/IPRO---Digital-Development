@@ -38,6 +38,11 @@
       "responses": ["The midterm is being held in PH-100 on 11/15/2021 at 9:00am ", "11/15/2021 at 9:00am in Perlstein Hall room 100", "PH-100 on 11/15 at 9:00am", "The midterm will be at 9:00am in Perlstien Hall room 100 on 11/15/21"]
     },
     {
+      "tag": "final",
+      "patterns": ["When is the final", "Final", "What time is the final"],
+      "responses": ["The final is held virtually on Zoom Meetings on 11/30/2021 at 6:00pm", "The final is on 11/30/2021 on Zoom Meetings at 6:00pm", "11/20/2021 on Zoom Meetings"]
+    },
+    {
       "tag": "attendance",
       "patterns": ["What is the attendance policy ", "attendance policy", "attendance information"],
       "responses": ["•\tOn the third absence your course grade will drop one letter grade\n•\tOn the fifth absence your course grade will drop another letter grade\n•\tOn each of sixth and seventh absence your course grade will drop another letter grade\n•\tIf you are more than 20 minutes late you will be counted as absent\n", "After 3 absences your grade drops one letter grade.", "After 3 absences, your grade drops one letter grade and after a fifth absence another letter grade.", "Three absences drops one letter grade and after the fifth, another letter grade"]
@@ -56,6 +61,11 @@
       "tag": "objectives",
       "patterns": ["What are the course objectives", "course objectives", "What will I learn in this course"],
       "responses": ["\n•\tUsing Scrum as the overall process for software development\n•\tCollaboratively work with other students in building a combined digital service\n•\tLearn how to work effectively as a team and improve process, tools and techniques to iterative improve team satisfaction, performance and effectiveness\n•\tIncrementally deliver a more complete offering week-over-week throughout the quarter\n", "Using Scrum, collaborating with teams using Github, Slack and more", "Software Development, Scrum, and Team Building", "Collaboratively working together in a series of one-week sprints for the duration building software as part of a distributed team using tools like Github, Slack, screen sharing and virtual whiteboards and using scrum and Kanban boards to facilitate and orchestrate your team's efforts."]
+    },
+    {
+      "tag": "grading",
+      "patterns": ["Grading", "How will I be graded", "What is the grading policy"],
+      "responses": ["You will be graded based on attendance and group project", "Three absences will drop grade by a letter grade"]
     }
   ]
 }
