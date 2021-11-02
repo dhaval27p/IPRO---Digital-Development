@@ -65,6 +65,7 @@ def chatbot():
     else:
         flash("You are not logged in", "Warning")
         return redirect(url_for("login"))
+
 @app.route('/logout')
 def logout():
     if 'user_id' in session:
