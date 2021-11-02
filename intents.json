@@ -66,6 +66,16 @@
       "tag": "grading",
       "patterns": ["Grading", "How will I be graded", "What is the grading policy"],
       "responses": ["You will be graded based on attendance and group project", "Three absences will drop grade by a letter grade"]
+    },
+    {
+      "tag": "evaluation",
+      "patterns": ["Evaluation", "How will I be evaluated", "What is the evaluation policy"],
+      "responses": ["You will be evaluated based on Scrum, GitHub, Kanban Board, and Attendance","Scrum, GitHub, Kanban Board, and Attendance"]
+    },
+    {
+      "tag": "requirements",
+      "patterns": ["Requirements", "What requirements are needed for this class","What programming language do I need to know"],
+      "responses": ["Any programming language","You don't need any requirements besides a knowledge of any programming language"]
     }
   ]
 }
