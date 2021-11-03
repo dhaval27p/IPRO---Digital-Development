@@ -5,7 +5,10 @@ from chat import bot
 
 app = Flask(__name__)
 app.secret_key = "helloMynameisJohnWick"
-app.permanent_session_lifetime = timedelta(seconds=10)
+app.permanent_session_lifetime = timedelta(days=7)
+
+
+
 class User:
     def __init__(self, id, username, password):
         self.id = id
@@ -28,8 +31,13 @@ print(users)
 @app.route("/")
 def home():
     return render_template("home.html")
+@app.route("/signup", methods=["POST", "GET"])
+def register():
+    if request.method =="POST":
+        usernm = request.form['username']
+        pwd = request.form['password']
 
-
+    return render_template("register.html")
 @app.route("/login", methods=['Post', 'GET'])
 def login():
     if "user_id" in session:

@@ -1,18 +1,21 @@
 {% extends "template.html" %}
 {% block title %} ChatBot {% endblock%}
 {% block content %}
+
 <div class="container">
     <body background="https://wallpaperaccess.com/full/1398312.jpg"></body>
     <h1>Welcome to the AI Chatbot for Education, {{user}}</h1>
     <br>
     <hr>
     <br>
+
     <div class="row">
         <div class="col-lg-9">
             <input class="form-control" type="text" name="question" id="question">
         </div>
         <div class="col-lg-3">
-            <button class="btn btn-primary btn-block" id="submit-button">Send</button>
+
+            <button class="btn btn-primary btn-block" type = "button" id="submit-button">Send</button>
         </div>
     </div>
     <br>
