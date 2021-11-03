@@ -31,6 +31,13 @@
 
 
 ## Week 11 ##
+- Moving the dry to 11/16 to allow more time to incorporate feedback
+- The dry run and final presentation template are in content under the name - Final Presentation Template.pptx
+- Review the submission for the mid-term ipro update
+- To sign up go to: https://azure.microsoft.com/en-us/free/students/ 
+- Use your @itt.edu credentials
+
+
 
 ## Week 12 ##
 
