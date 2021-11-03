@@ -21,13 +21,12 @@
 ## Week 9 ##
 
 ## Week 10 ##
-- Feedback
-	- Feedback will be in FacultyFeedback.md each week
-	- Built screens from wireframe
-	- Working on database 
-	- Demo are good to have weekly to make progress and keep updates small
-	- Consider tagging stories scenario#1 and scenario#2 so you know what you need to do for alignment with the end of the course
-  - What have you done to address demo feedback?
+- Feedback will be in FacultyFeedback.md each week
+- Built screens from wireframe
+- Working on database 
+- Demo are good to have weekly to make progress and keep updates small
+- Consider tagging stories scenario#1 and scenario#2 so you know what you need to do for alignment with the end of the course
+- What have you done to address demo feedback?
 
 
 ## Week 11 ##
