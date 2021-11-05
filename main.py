@@ -32,35 +32,40 @@ print(users)
 def home():
     return render_template("home.html")
 @app.route("/signup", methods=["POST", "GET"])
-def register():
+def signup():
     if request.method =="POST":
         usernm = request.form['username']
         pwd = request.form['password']
 
-    return render_template("register.html")
+    return render_template("signup.html")
 @app.route("/login", methods=['Post', 'GET'])
 def login():
     if "user_id" in session:
         flash("Already Logged In!")
         return redirect(url_for('home'))
+
     if request.method =="POST":
+        if request.form.get('Sign_up')=='Create User':
+            return redirect(url_for("signup"))
+        else:
+            usernm = request.form['username']
+            pwd = request.form['password']
 
-        usernm = request.form['username']
-        pwd = request.form['password']
+            user = [x for x in users if x.username == usernm][0]
+            if user and user.password == pwd:
+                session.permanent=True
+                session['user_id']=user.username
 
-        user = [x for x in users if x.username == usernm][0]
-        if user and user.password == pwd:
-            session.permanent=True
-            session['user_id']=user.username
-
-            return redirect(url_for('chatbot'))
-        flash("Incorrect password", "error")
-        return redirect(url_for('login'))
+                return redirect(url_for('chatbot'))
+            flash("Incorrect password", "error")
+            return redirect(url_for('login'))
     return render_template('login.html')
+
 
 
 @app.route('/chat', methods=["GET", "POST"])
 def chatbot():
+
     if 'user_id' in session:
 
         user = session['user_id']

@@ -1,5 +1,5 @@
 {% extends "template.html" %}
-{% block title %} Sign in {% endblock%}
+{% block title %} Signup{% endblock%}
 {% block content %}
 <style>
   .forms {
@@ -18,20 +18,16 @@
   }
 
 </style>
-
 <form class = "forms" method="POST">
-  Username:<br>
+  <h2></h2>Username:<br>
   <input type = "text" name='username'><br>
   Password: <br>
+  <input type="password" name='password' ><br>
+  Retype Password: <br>
   <input type="password" name='password' ><br><br>
-  <input type = "submit" name = "login " value="Login"/>
-  <input type = "submit" name = "Sign_up" value="Create User"/>
+  <input type = "submit" value="Sign up">
+
 </form>
-
-
-
-
-
   {% with messages = get_flashed_messages() %}
     {% if messages %}
       {% for msg in messages %}

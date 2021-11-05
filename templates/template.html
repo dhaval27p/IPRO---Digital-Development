@@ -16,6 +16,8 @@
         float: right;
 
     }
+
+
     .topnav a.log:hover{
         background-color: green;
     }
@@ -31,7 +33,7 @@
       float: left;
       color: white;
       text-align: center;
-      padding: 20px 160px;
+      padding: 20px 140px;
       text-decoration: none;
       font-size: 17px;
     }
@@ -52,7 +54,7 @@
         <a id = "AI" class="active" href="#" >AI Chat Bot</a>
         <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
         <a class="nav-link" href="{{ url_for('chatbot') }}">ChatBot2.0 </a>
-        <a class= 'log' id="logins"  href="{{ url_for('login') }}" style="float: right;">Login</a>
+        <a class= 'log' id="sign"  href="{{ url_for('signup') }}" style="float: right;">Sign up</a>
         <a class= 'log' id="logout"  href="{{ url_for('logout') }}">Logout</a>
 
     </div>
@@ -61,7 +63,7 @@
 
 {% if 'user_id' in session %}
     <style>
-        #logins{
+        #sign{
             display: none;
             }
         #logout{
