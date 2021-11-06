@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
 from datetime import timedelta
 
@@ -9,35 +11,44 @@ app.permanent_session_lifetime = timedelta(days=7)
 
 
 
-class User:
-    def __init__(self, id, username, password):
-        self.id = id
-        self.username = username
-        self.password = password
-
-    def __repr__(self):
-        return f'<User: {repr(self.username)}>'
-
-users =[]
-
-users.append(User(id=1, username='Raj', password= '123'))
-users.append(User(id=2, username='Dhaval', password= '1234'))
-users.append(User(id=1, username='Rutvik', password= '123'))
-users.append(User(id=2, username='Ciya', password= 'Inciya'))
-print(users)
-
-
 
 @app.route("/")
 def home():
     return render_template("home.html")
+
+
 @app.route("/signup", methods=["POST", "GET"])
 def signup():
     if request.method =="POST":
         usernm = request.form['username']
         pwd = request.form['password']
+        if pwd == request.form['password2']:
+            with open('users.json', "r") as f:
+                data = json.load(f)
+            taken = False
+            for _user in range(0, len(data)):
+                if data[_user]['username'] == usernm:
+                    taken = True
+                    flash("Username is taken, try different username", "error")
+                    break
+            if taken == False:
+                _dict = {'username':usernm, "password":pwd}
+                data.append(_dict)
+
+                with open('users.json', 'w') as f:
+                    json.dump(data,f, indent=4)
+                session.permanent = True
+                session['user_id'] = usernm
+                return redirect(url_for('chatbot'))
+            else:
+                return redirect(url_for('signup'))
+        else:
+            flash("Incorrect password", "error")
 
     return render_template("signup.html")
+
+
+
 @app.route("/login", methods=['Post', 'GET'])
 def login():
     if "user_id" in session:
@@ -50,11 +61,20 @@ def login():
         else:
             usernm = request.form['username']
             pwd = request.form['password']
+            with open('users.json') as f:
+                data = json.load(f)
+            user =[]
+            idx = 0
+            for _user in range(0, len(data)):
 
-            user = [x for x in users if x.username == usernm][0]
-            if user and user.password == pwd:
+                if data[_user]['username'] == usernm:
+                    idx = _user
+                    user=(data[_user]['username'])
+
+            # user = [x for x in users if x.username == usernm][0]
+            if user and data[idx]['password'] == pwd:
                 session.permanent=True
-                session['user_id']=user.username
+                session['user_id']=user
 
                 return redirect(url_for('chatbot'))
             flash("Incorrect password", "error")

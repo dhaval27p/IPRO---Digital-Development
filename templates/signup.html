@@ -16,6 +16,9 @@
   margin-top: -17.5px;
   margin-left: -20px;
   }
+  #message{
+  color: red;
+  }
 
 </style>
 <form class = "forms" method="POST">
@@ -24,15 +27,15 @@
   Password: <br>
   <input type="password" name='password' ><br>
   Retype Password: <br>
-  <input type="password" name='password' ><br><br>
+  <input type="password" name='password2' ><br><br>
   <input type = "submit" value="Sign up">
-
-</form>
-  {% with messages = get_flashed_messages() %}
+{% with messages = get_flashed_messages() %}
     {% if messages %}
       {% for msg in messages %}
-        <p>{{msg}}</p>
+        <p id="message">{{msg}}</p>
       {% endfor %}
     {% endif %}
   {% endwith %}
+</form>
+
 {% endblock %}
