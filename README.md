@@ -49,19 +49,19 @@
 
 <details>
            <summary>Scenario #1</summary>
-           <p>Mike's physics class is giving him trouble. He becomes very confused by the material and attempts to contact the TA. The TA is swamped with questions, and Mike receives an email from her promising to respond to all emails as soon as she can. Not hearing back after two days, he decides to use the AI chat bot to help him understand the physics material.</p>
+           <p>Mike who is an undergraduate student, needs some help with his physics class. He becomes very confused by the material and attempts to contact the TA. The TA is swamped with questions, and Mike receives an email from her promising to respond to all emails as soon as she can. Not hearing back after 24 hours, he decides to use the AI chat bot to help him understand the physics material. The bot provides the student with general help and resources a student can checkout to help with the different hw's and projects.</p>
          </details>
 
 
 <details>
            <summary>Scenario #2</summary>
-           <p>John has fallen behind in his course after missing a couple of lectures due to COVID. He hasn't been able to attend TA office hours because he is taking other online classes at the same time. As a result, he can use the AI TA chat bot to catch up on some general questions.</p>
+           <p>John an undergraduate student has fallen behind in his course after missing a couple of lectures due to COVID. He hasn't been able to attend TA office hours because he is taking other online classes at the same time. As a result, he can use the AI chat bot to catch up on some general questions. Also John notices that the chat bot has not been responsive in terms of some difficult questions asked by the student. This is where John dosen't have to worry about it becuase the bot will automatically save his questions and display it to the professors and TA's user portal.</p>
          </details>
 
 
 <details>
            <summary>Scenario #3</summary>
-           <p>Professor Wick is ill and needs to take some time off from work. The AI assistant chabot can scan the document that the professor has uploaded using natural language processing (NLP). As a result, an AI assistant will be able to cover the lecture that the student may have missed.</p>
+           <p>Professor Wick is ill and needs to take some time off from work. The chabot website can has a tab where the professor can upload the questions/resoources for the chat bot. As a result, the AI chat bot will be able to help the students with the latest lectures with the class materials from the bot.</p>
          </details>
 
 
