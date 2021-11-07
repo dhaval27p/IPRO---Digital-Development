@@ -65,12 +65,17 @@ def login():
                 data = json.load(f)
             user =[]
             idx = 0
+            info = False
             for _user in range(0, len(data)):
 
                 if data[_user]['username'] == usernm:
+                    info = True
                     idx = _user
                     user=(data[_user]['username'])
 
+            if info == False:
+                flash("Incorrect username", "error")
+                return redirect(url_for('login'))
             # user = [x for x in users if x.username == usernm][0]
             if user and data[idx]['password'] == pwd:
                 session.permanent=True

@@ -6,7 +6,55 @@
     color: red;
     }
     #response{
+    float:right;
+    max-width: 150px;
     color:white;
+    background-color: #1589FF;
+    border: 2px solid #1589FF;
+    overflow-wrap: break-word;
+    padding: 5px;
+    border-radius: 5px;
+   //border-bottom-right-radius: 10px;
+
+
+    }
+
+
+    #question{
+    size:5;
+
+
+    }
+    .container{
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -390px;
+  margin-left: -350px;
+    }
+    #kabir{
+    width: 200px;
+    overflow-wrap: break-word;
+    height: auto;
+    color: white;
+    background-color: green;
+    border: 2px solid, green ;
+    padding: 10px;
+    border-radius: 5px;
+
+    }
+
+
+    #textbox {
+    width: 650px;
+    resize: horizontal;
+    overflow-wrap: break-word;
+     margin-left: -2px;
+     border: 2px solid white;
+     padding: 10px;
+      border-radius: 5px;
+      height: 300px;
+      overflow-y: auto;
     }
 </style>
 <div class="container">
@@ -16,21 +64,19 @@
     <hr>
     <br>
 
-    <div class="row">
-        <div class="col-lg-9">
-            <input class="form-control" type="text" name="question" id="question">
-        </div>
-        <div class="col-lg-3">
 
-            <button class="btn btn-primary btn-block" type = "button" id="submit-button">Send</button>
-        </div>
-    </div>
+    <form>
+    <input  type="text" name="question" size = "75" id="question">
+    <button type = 'submit' size="5" id="submit-button">Submit</button>
+    </form>
+
     <br>
-    <div class="row">
-        <div class="col">
-            <p id="response"></p>
-        </div>
+    <div id = "textbox">
+
+
     </div>
+
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -47,9 +93,27 @@
                 data: {
                     question: $("#question").val()
                 },
+
                 success: function(result) {
-                    $("#response").append("<br>Me: "+$("#question").val()+ "<br> Kabir: "+result.response);
+
+
+
+                    response = result.response;
+
+                    $("<div id='response'><p style='text-align: center';>Me: "+$("#question").val() +"</p></div>").appendTo("#textbox");
+                    $("<div style='visibility: hidden'; id='kabir'>Me: "+$("#question").val() +"</p></div><br>").appendTo("#textbox");
+                    $("<div id='kabir'><p>Kabir: "+response+"</p></div>").appendTo("#textbox");
+
+                    //$("#new-conv").append("<p id='response'></p><br>");
+                    //$("#new-conv").append("<p style='float:right;'id='kabir'></p><br>")
+                    //$("#response").append("<p>Me: "+$("#question").val() +"</p><br>");
+
+
+
+                    //$("#kabir").append("<p>Kabir: "+response+"</p><br>")
                     $("#question").val("")
+                    $('#textbox').scrollTop($('#textbox').height())
+
                 },
                 error: function(result) {
                     alert('error');
@@ -57,5 +121,7 @@
             });
         });
     });
-</script>
+
+
+    </script>
 {% endblock %}
