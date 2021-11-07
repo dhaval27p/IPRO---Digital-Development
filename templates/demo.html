@@ -108,15 +108,11 @@
 
                     $("<div id='response'><p style='text-align: center';>Me: "+$("#question").val() +"</p></div>").appendTo("#textbox");
                     $("<div style='visibility: hidden'; id='kabir'>Me: "+$("#question").val() +"</p></div><br>").appendTo("#textbox");
-                    $("<div id='kabir'><p>Kabir: "+response+"</p></div>").appendTo("#textbox");
 
-                    //$("#new-conv").append("<p id='response'></p><br>");
-                    //$("#new-conv").append("<p style='float:right;'id='kabir'></p><br>")
-                    //$("#response").append("<p>Me: "+$("#question").val() +"</p><br>");
+                    var a = $("<div id='kabir'><p>Kabir: "+response+"</p></div>").appendTo("#textbox");
+                    a.hide();
+                    a.delay((Math.random()*(5000-200)+200)).fadeIn();
 
-
-
-                    //$("#kabir").append("<p>Kabir: "+response+"</p><br>")
                     $("#question").val("")
                     $('#textbox').scrollTop($('#textbox')[0].scrollHeight);
 
