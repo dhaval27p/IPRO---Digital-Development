@@ -25,16 +25,18 @@
     background-color:transparent;
     }
     .topnav {
+    position: relative;
+    width:100%;
   overflow: hidden;
   background-color: #333;
-  position: static;
+
             }
 
     .topnav a {
       float: left;
       color: white;
       text-align: center;
-      padding: 20px 140px;
+      padding: 20px 20px;
       text-decoration: none;
       font-size: 17px;
     }
@@ -60,7 +62,7 @@
 
     </div>
 
-</body>
+
 
 {% if 'user_id' in session %}
     <style>
@@ -77,6 +79,6 @@
 
     {% block content %}
     {% endblock %}
-
+</body>
 
 </html>

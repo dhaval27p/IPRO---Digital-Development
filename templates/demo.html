@@ -19,18 +19,26 @@
 
     }
 
-
     #question{
-    size:5;
+    width:620px;
+    float:left;
+    }
 
+    #submit-button{
+
+    float:right;
+    width: auto;
+    text-align:center;
 
     }
     .container{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -390px;
-    margin-left: -350px;
+    width:680px;
+    top: 30%;
+    text-align:center;
+    margin-top: 10%;
+
+
+
     }
     #kabir{
     width: 200px;
@@ -39,34 +47,33 @@
     color: white;
     background-color: green;
     border: 2px solid, green ;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
 
     }
 
 
     #textbox {
-    width: 650px;
+     width: 650px;
 
-    overflow-wrap: break-word;
-     margin-left: -2px;
+     overflow-wrap: break-word;
+
      border: 2px solid white;
-     padding: 10px;
-      border-radius: 5px;
-      height: 300px;
-      overflow-y: scroll;
+     padding: 12px;
+     border-radius: 5px;
+     height: 300px;
+     overflow-y: scroll;
     }
 </style>
 <h1 style="text-align:center;"><l>Welcome to the AI Chatbot for Education, {{user}}</l> </h1>
+
 <div class="container">
     <body background="https://wallpaperaccess.com/full/1398312.jpg"></body>
-    <br>
-    <hr>
-    <br>
 
-    <form>
-    <input  type="text" name="question" size = "75" id="question">
-    <button type = 'submit' size="5" id="submit-button">Submit</button>
+
+    <form style="display:flex;">
+    <input  type="text" name="question"  id="question">
+    <button type = 'submit' id="submit-button">Send</button>
     </form>
 
     <br>

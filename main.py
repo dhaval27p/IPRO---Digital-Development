@@ -22,29 +22,34 @@ def signup():
     if request.method =="POST":
         usernm = request.form['username']
         pwd = request.form['password']
-        if pwd == request.form['password2']:
-            with open('users.json', "r") as f:
-                data = json.load(f)
-            taken = False
-            for _user in range(0, len(data)):
-                if data[_user]['username'] == usernm:
-                    taken = True
-                    flash("Username is taken, try different username", "error")
-                    break
-            if taken == False:
-                _dict = {'username':usernm, "password":pwd}
-                data.append(_dict)
-
-                with open('users.json', 'w') as f:
-                    json.dump(data,f, indent=4)
-                session.permanent = True
-                session['user_id'] = usernm
-                return redirect(url_for('chatbot'))
-            else:
-                return redirect(url_for('signup'))
+        if usernm == "":
+            flash("Must complete the forms", "error")
+            return redirect(url_for('signup'))
         else:
-            flash("Incorrect password", "error")
+            if pwd == request.form['password2']:
+                with open('users.json', "r") as f:
+                    data = json.load(f)
+                taken = False
+                for _user in range(0, len(data)):
+                    if data[_user]['username'] == usernm:
+                        taken = True
+                        flash("Username is taken, try different username", "error")
+                        return redirect(url_for('signup'))
 
+                if taken == False:
+                    _dict = {'username':usernm, "password":pwd}
+                    data.append(_dict)
+
+                    with open('users.json', 'w') as f:
+                        json.dump(data,f, indent=4)
+                    session.permanent = True
+                    session['user_id'] = usernm
+                    return redirect(url_for('chatbot'))
+                else:
+                    return redirect(url_for('signup'))
+            else:
+                flash("Incorrect password", "error")
+                return redirect(url_for('signup'))
     return render_template("signup.html")
 
 
