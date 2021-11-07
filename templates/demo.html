@@ -27,7 +27,7 @@
     }
     .container{
     position: fixed;
-    top: 70%;
+    top: 50%;
     left: 50%;
     margin-top: -390px;
     margin-left: -350px;
@@ -54,7 +54,7 @@
      padding: 10px;
       border-radius: 5px;
       height: 300px;
-      overflow-y: auto;
+      overflow-y: scroll;
     }
 </style>
 <div class="container">
@@ -112,7 +112,7 @@
 
                     //$("#kabir").append("<p>Kabir: "+response+"</p><br>")
                     $("#question").val("")
-                    $('#textbox').scrollTop($('#textbox').height())
+                    $('#textbox').scrollTop($('#textbox')[0].scrollHeight);
 
                 },
                 error: function(result) {
