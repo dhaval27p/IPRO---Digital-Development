@@ -4,49 +4,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<style>
-
-    #logout{
-        display:none;
-
-    }
-
-    #logout{
-        float: right;
-
-    }
-
-
-    .topnav a.log:hover{
-        background-color: green;
-    }
-    #AI:hover{
-    background-color:transparent;
-    }
-    .topnav {
-    position: relative;
-    width:100%;
-  overflow: hidden;
-  background-color: #333;
-
-            }
-
-    .topnav a {
-      float: left;
-      color: white;
-      text-align: center;
-      padding: 20px 20px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-    .topnav a:hover {
-
-      background-color: gray;
-
-    }
-
-</style>
 
 </head>
 
@@ -55,7 +14,7 @@
     <div class="topnav">
 
         <a id = "AI" class="active" href="#" >AI Chat Bot</a>
-        <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
         <a class="nav-link" href="{{ url_for('chatbot') }}">ChatBot2.0 </a>
         <a class= 'log' id="sign"  href="{{ url_for('signup') }}" style="float: right;">Sign up</a>
         <a class= 'log' id="logout"  href="{{ url_for('logout') }}">Logout</a>

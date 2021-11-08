@@ -1,1 +1,158 @@
-body {color: red;}
+
+    #logout{
+        display:none;
+
+    }
+
+    #logout{
+        float: right;
+
+    }
+
+
+    .topnav a.log:hover{
+        background-color: green;
+    }
+    #AI:hover{
+    background-color:transparent;
+    }
+    .topnav {
+    position: relative;
+    width:100%;
+  overflow: hidden;
+  background-color: #333;
+
+            }
+
+    .topnav a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 20px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .topnav a:hover {
+
+      background-color: gray;
+
+    }
+
+
+    l{
+    color: red;
+    }
+    #response{
+    float:right;
+    max-width: 150px;
+    color:white;
+    background-color: #1589FF;
+    border: 2px solid #1589FF;
+    overflow-wrap: break-word;
+    padding: 5px;
+    border-radius: 5px;
+   //border-bottom-right-radius: 10px;
+
+
+    }
+
+    #question{
+    width:620px;
+    float:left;
+    }
+
+    #submit-button{
+
+    float:right;
+    width: auto;
+    text-align:center;
+
+    }
+    .container{
+    width:680px;
+    top: 30%;
+    text-align:center;
+    margin-top: 10%;
+
+
+
+    }
+    #kabir{
+    width: 200px;
+    overflow-wrap: break-word;
+    height: auto;
+    color: white;
+    background-color: green;
+    border: 2px solid, green ;
+    padding: 5px;
+    border-radius: 5px;
+
+    }
+
+
+    #textbox {
+     width: 650px;
+
+     overflow-wrap: break-word;
+
+     border: 2px solid white;
+     padding: 12px;
+     border-radius: 5px;
+     height: 300px;
+     overflow-y: scroll;
+    }
+
+    .animate{
+
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    margin: .5rem;
+    animation: scaling 2.5s ease-in-out infinite;
+
+    }
+
+
+
+    @keyframes scaling{
+    0%, 100%{
+        transform:scale(0.2);
+        background-color: white;
+
+    }
+    40%{
+        transform:scale(1);
+        background-color: gray;
+    }
+    50%{
+        transform:scale(1);
+
+
+    }
+    }
+
+    #one{
+       animation-delay: 0s;
+       transform:scale(0);
+    }
+
+    #two{
+       animation-delay: .5s;
+       transform:scale(0);
+    }
+
+    #three{
+       animation-delay: 1s;
+       transform:scale(0);
+    }
+    .forms {
+ dispay: flex;
+    position: absolute;
+    top: 40%;
+  left: 40%;
+  }
+  #message{
+  color: red;
+  }
