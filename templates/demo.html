@@ -64,6 +64,37 @@
      height: 300px;
      overflow-y: scroll;
     }
+
+    .animate{
+
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    margin: .5rem;
+    animation: scaling 2.5s ease-in-out infinite;
+
+    }
+
+
+
+    @keyframes scaling{
+    0%, 100%{
+        transform:scale(0.2);
+
+    }
+    50%{
+        transform:scale(1);
+
+    }
+    }
+
+
+
+
+
+
 </style>
 <h1 style="text-align:center;"><l>Welcome to the AI Chatbot for Education, {{user}}</l> </h1>
 
@@ -108,11 +139,22 @@
 
                     $("<div id='response'><p style='text-align: center';>Me: "+$("#question").val() +"</p></div>").appendTo("#textbox");
                     $("<div style='visibility: hidden'; id='kabir'>Me: "+$("#question").val() +"</p></div><br>").appendTo("#textbox");
+                    //<p>Kabir: "+response+"</p>
+                    var a = $("<div id='kabir'></div>").appendTo("#textbox");
+                    //var b = a.append("<div class='animate' id="first-bot"></div><div class='animate' id="second-bot"></div><div class='animate' id="third-bot"></div>");
+                    //$('#AI-response #animate').hide();
+                    let b = "<div class='animate'></div><div class='animate' ></div><div class='animate'></div>"
+                    a.append(b);
 
-                    var a = $("<div id='kabir'><p>Kabir: "+response+"</p></div>").appendTo("#textbox");
-                    a.hide();
-                    a.delay((Math.random()*(5000-200)+200)).fadeIn();
 
+
+
+                    setTimeout(function(){
+                    a.append("<p>Kabir: "+response+"</p>");
+                    $('.animate').remove();
+                      }, ((Math.random()*2000)+1000));
+
+                    //$('#AI-response #animate').hide();
                     $("#question").val("")
                     $('#textbox').scrollTop($('#textbox')[0].scrollHeight);
 
