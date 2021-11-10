@@ -82,10 +82,9 @@ def login():
                 flash("Incorrect username", "error")
                 return redirect(url_for('login'))
             # user = [x for x in users if x.username == usernm][0]
-            if user and data[idx]['password'] == pwd:
+            elif user and data[idx]['password'] == pwd:
                 session.permanent=True
                 session['user_id']=user
-
                 return redirect(url_for('chatbot'))
             flash("Incorrect password", "error")
             return redirect(url_for('login'))

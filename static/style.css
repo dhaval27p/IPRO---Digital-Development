@@ -71,11 +71,17 @@
     .container{
     width:680px;
     top: 30%;
-    text-align:center;
+    text-align: center;
     margin-top: 10%;
+    }
 
+    .log_container{
+    height: 100vh;
+    top: 50%;
+    display: flex;
 
-
+    justify-content: center;
+    align-items: center;
     }
     #kabir{
     width: 200px;
@@ -147,10 +153,10 @@
        transform:scale(0);
     }
     .forms {
- dispay: flex;
-    position: absolute;
-    top: 40%;
-  left: 40%;
+    dispay: flex;
+
+
+
   }
   #message{
   color: red;

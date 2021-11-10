@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% block title %} Signup{% endblock%}
 {% block content %}
-
+<div class="log_container" >
 <form class = "forms" method="POST">
   <h2></h2>Username:<br>
   <input type = "text" name='username'><br>
@@ -23,5 +23,5 @@
     {% endif %}
   {% endwith %}
 </form>
-
+    </div>
 {% endblock %}

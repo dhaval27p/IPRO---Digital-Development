@@ -1,19 +1,10 @@
 {% extends "template.html" %}
 {% block title %} Sign in {% endblock%}
 {% block content %}
-<style>
-  .forms {
-  dispay: flex;
-    position: absolute;
-    top: 40%;
-  left: 40%;
-  }
-  #message{
-  color: red;
-  }
 
-</style>
 
+
+<div class="log_container" >
 <form class = "forms" method="POST">
   Username:<br>
   <input type = "text" name='username'><br>
@@ -29,7 +20,7 @@
     {% endif %}
   {% endwith %}
 </form>
-
+</div>
 
 
 

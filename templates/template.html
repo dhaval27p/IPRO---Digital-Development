@@ -22,7 +22,8 @@
 
     </div>
 
-
+    {% block content %}
+    {% endblock %}
 
 {% if 'user_id' in session %}
     <style>
@@ -37,8 +38,7 @@
 
 {% endif%}
 
-    {% block content %}
-    {% endblock %}
+
 
 <footer id="footer">
   <p style="color: white";>IPRO 497: Team A (AI ChatBot)&reg<br>
