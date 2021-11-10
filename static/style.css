@@ -72,14 +72,14 @@
     width:680px;
     top: 30%;
     text-align: center;
-    margin-top: 10%;
+    margin-top:-5%;
+
     }
 
     .log_container{
     height: 100vh;
-    top: 50%;
+    margin-top:-5%;
     display: flex;
-
     justify-content: center;
     align-items: center;
     }
@@ -153,8 +153,8 @@
        transform:scale(0);
     }
     .forms {
-    dispay: flex;
-
+    width:20%;
+    margin-left:10%;
 
 
   }
