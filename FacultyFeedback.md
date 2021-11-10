@@ -36,9 +36,13 @@
 - To sign up go to: https://azure.microsoft.com/en-us/free/students/ 
 - Use your @itt.edu credentials
 
-
-
 ## Week 12 ##
+- Good use of labels with Scenario 1, 2 and 3
+- Good use of styling
+- Staying with files rather making the move to DB right now
+- Nice use of wait time for response
+- Love that your driving toward three scenarios 
+- Good Progress
 
 ## Week 13 ##
 
