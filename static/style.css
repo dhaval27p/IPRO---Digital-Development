@@ -45,9 +45,9 @@
     #response{
     float:right;
     max-width: 150px;
-    color:white;
-    background-color: #1589FF;
-    border: 2px solid #1589FF;
+    color:black;
+    background-color: white;
+    border: 2px solid white;
     overflow-wrap: break-word;
     padding: 5px;
     border-radius: 5px;
@@ -81,8 +81,8 @@
     width: 200px;
     overflow-wrap: break-word;
     height: auto;
-    color: white;
-    background-color: blue;
+    color: black;
+    background-color: white;
     border: 2px solid, green ;
     padding: 5px;
     border-radius: 5px;
@@ -93,8 +93,8 @@
      width: 650px;
 
      overflow-wrap: break-word;
-
-     border: 2px solid white;
+     background-color: #283747;
+     border: 2px solid #283747;
      padding: 12px;
      border-radius: 5px;
      height: 300px;
@@ -166,7 +166,7 @@
     }
 
 body {
-    background: linear-gradient(-45deg, #9FE2BF, #40E0D0, #6495ED, #CCCCFF);
+    background: linear-gradient(-45deg, #DFFF00, #FFBF00, #FF7F50, #DE3163);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
 }

@@ -30,7 +30,7 @@
                     setTimeout(function(){
                     a.append("<p>Kabir: "+response+"</p>");
                     $('.animate').remove();
-                      }, ((Math.random()*3000)+1000));
+                      }, ((Math.random()*4000)));
 
                     //$('#AI-response #animate').hide();
                     $("#question").val("")
