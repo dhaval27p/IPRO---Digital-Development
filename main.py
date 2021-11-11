@@ -10,6 +10,12 @@ app.secret_key = "helloMynameisJohnWick"
 app.permanent_session_lifetime = timedelta(days=7)
 
 
+def admin(idx):
+    with open('users.json', "r") as f:
+        data = json.load(f)
+    print(data[idx])
+    print(data[idx]['admin'])
+    return data[idx]['admin']
 
 
 @app.route("/")
@@ -22,6 +28,7 @@ def signup():
     if request.method =="POST":
         usernm = request.form['username']
         pwd = request.form['password']
+        admin = request.form['decision']
         if usernm == "":
             flash("Must complete the forms", "error")
             return redirect(url_for('signup'))
@@ -36,17 +43,17 @@ def signup():
                         flash("Username is taken, try different username", "error")
                         return redirect(url_for('signup'))
 
-                if taken == False:
-                    _dict = {'username':usernm, "password":pwd}
-                    data.append(_dict)
+                #if taken == False:
 
-                    with open('users.json', 'w') as f:
-                        json.dump(data,f, indent=4)
-                    session.permanent = True
-                    session['user_id'] = usernm
-                    return redirect(url_for('chatbot'))
-                else:
-                    return redirect(url_for('signup'))
+                _dict = {'username':usernm, "password":pwd, "admin":admin}
+                data.append(_dict)
+                with open('users.json', 'w') as f:
+                    json.dump(data,f, indent=4)
+                session.permanent = True
+                session['user_id'] = [usernm, admin]
+                return redirect(url_for('chatbot'))
+                #else:
+                    #return redirect(url_for('signup'))
             else:
                 flash("Incorrect password", "error")
                 return redirect(url_for('signup'))
@@ -84,7 +91,10 @@ def login():
             # user = [x for x in users if x.username == usernm][0]
             elif user and data[idx]['password'] == pwd:
                 session.permanent=True
-                session['user_id']=user
+                session['user_id']=[user,admin(idx)]
+                print(session['user_id'][1])
+
+
                 return redirect(url_for('chatbot'))
             flash("Incorrect password", "error")
             return redirect(url_for('login'))
@@ -97,13 +107,14 @@ def chatbot():
 
     if 'user_id' in session:
 
-        user = session['user_id']
+        user = session['user_id'][0]
         if request.method == 'POST':
             the_question = request.form['question']
             response = bot(the_question)
             return jsonify({"response": response })
         else:
             return render_template('demo.html', user=user)
+
     else:
         flash("You are not logged in", "Warning")
         return redirect(url_for("login"))
@@ -115,5 +126,15 @@ def logout():
         flash("You have been logout!", "info")
     session.pop("user_id", None)
     return redirect(url_for("login"))
+@app.route("/admin", methods=['Post', 'GET'])
+def admin_power():
+    if request.method == 'POST':
+        if request.form['admin'] == "Delete Users":
+            return redirect(url_for('delete_users'))
+    return render_template('admin.html')
+
+@app.route("/deleteusers", methods=['Post', 'GET'])
+def delete_users():
+    return render_template('delete.html')
 if __name__ == "__main__":
     app.run( debug=True)

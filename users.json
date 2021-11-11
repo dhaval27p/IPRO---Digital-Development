@@ -1,22 +1,42 @@
 [
     {
         "username": "Raj",
-        "password": "123"
+        "password": "123",
+        "admin": "yes"
     },
     {
         "username": "Dhaval",
-        "password": "1234"
+        "password": "1234",
+        "admin": "no"
     },
     {
         "username": "Ciya",
-        "password": "123"
+        "password": "123",
+        "admin": "no"
     },
     {
         "username": "Rutvik",
-        "password": "123"
+        "password": "123",
+        "admin": "yes"
     },
     {
         "username": "Martin",
-        "password": "1"
+        "password": "1",
+        "admin": "yes"
+    },
+    {
+        "username": "Urvish",
+        "password": "123",
+        "admin": "yes"
+    },
+    {
+        "username": "Be",
+        "password": "123",
+        "admin": "yes"
+    },
+    {
+        "username": "Baba",
+        "password": "123",
+        "admin": "no"
     }
 ]

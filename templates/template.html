@@ -19,13 +19,14 @@
         <a class="nav-link" href="{{ url_for('chatbot') }}">ChatBot2.0 </a>
         <a class= 'log' id="sign"  href="{{ url_for('signup') }}" style="float: right;">Sign up</a>
         <a class= 'log' id="logout"  href="{{ url_for('logout') }}">Logout</a>
+        <a class= 'nav-link' id="admin"  href="{{ url_for('admin_power') }}">Admin</a>
 
     </div>
 
     {% block content %}
     {% endblock %}
 
-{% if 'user_id' in session %}
+{% if 'user_id' in session and session['user_id'][1] == 'yes' %}
     <style>
         #sign{
             display: none;
@@ -33,6 +34,26 @@
         #logout{
             display: inline-block;
         }
+        #admin{
+        display: inline-block;
+        }
+        body{
+    background: linear-gradient(-45deg, #0079FF, #0055B2, #003875 , #1B4471 );
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+        }
+        #home{
+        color:white; }
+    </style>
+{% elif 'user_id' in session %}
+    <style>
+        #sign{
+            display: none;
+            }
+        #logout{
+            display: inline-block;
+        }
+
     </style>
 
 

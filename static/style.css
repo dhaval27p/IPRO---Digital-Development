@@ -9,12 +9,17 @@
 
     }
 
+    #admin{
+        display: none;
+    }
+
 
     .topnav a.log:hover{
         background-color: green;
     }
     #AI:hover{
     background-color:transparent;
+
     }
     .topnav {
     position: relative;
@@ -33,7 +38,7 @@
       font-size: 17px;
     }
     .topnav a:hover {
-
+      width: 10%;
       background-color: gray;
 
     }
@@ -70,9 +75,8 @@
     }
     .container{
     width:680px;
-    top: 30%;
+
     text-align: center;
-    margin-top:-5%;
 
     }
 
