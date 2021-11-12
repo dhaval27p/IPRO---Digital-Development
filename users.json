@@ -5,38 +5,23 @@
         "admin": "yes"
     },
     {
-        "username": "Dhaval",
-        "password": "1234",
-        "admin": "no"
-    },
-    {
-        "username": "Ciya",
+        "username": "Kanu",
         "password": "123",
-        "admin": "no"
+        "admin": "yes",
+        "time": "2021-11-11 22:30:55.186979"
     },
     {
-        "username": "Rutvik",
+        "username": "Kaushal",
         "password": "123",
-        "admin": "yes"
+        "admin": "yes",
+        "time": "2021/11/11 10:35:02"
     },
     {
-        "username": "Martin",
-        "password": "1",
-        "admin": "yes"
-    },
-    {
-        "username": "Urvish",
+        "first-name": "Pop",
+        "last-name": "Mike",
+        "username": "Pop_MIke",
         "password": "123",
-        "admin": "yes"
-    },
-    {
-        "username": "Be",
-        "password": "123",
-        "admin": "yes"
-    },
-    {
-        "username": "Baba",
-        "password": "123",
-        "admin": "no"
+        "admin": "no",
+        "time": "2021/11/11 10:57:39"
     }
 ]

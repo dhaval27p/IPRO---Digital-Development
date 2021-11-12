@@ -3,17 +3,70 @@
 {% extends "template.html" %}
 {% block title %} Delete Users {% endblock%}
 {% block content %}
-<div class="log_container" style="width: 100%; height: 100vh;" >
+<div class="log_container" >
     <form method = 'post'>
-        <p>Enter user name</p>
-        <input type = 'text' name="user">
-        <button type="submit" name="submit" value="search">Search</button>
-        <button type="submit" style = "display: None;" name="A">Weekly summary</button>
+        <p class= "admin-font" >Enter user name</p>
+        <input type = 'text' name="user" id="users">
+        <button type="submit" id="submit" value="search">Search</button>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p id="message">{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+         <div id="after-submit">
+
+    </div>
     </form>
 
 
 
+
+
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+jQuery(document).ready(function() {
+    $("#submit").click(function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "/deleteuser",
+                data: {
+                    user: $('#users').val()
+
+                },
+
+                success: function(result) {
+                        firstname = result.firstname;
+                        lastname = result.lastname;
+                        time = result.time;
+                    $("<div>First name: <label class='admin-font'>"+firstname+"</label><br>Last name: <label class='admin-font'>"+lastname+"</label><br>Created: <label class='admin-font'>"+time+"</label></div>").appendTo('#after-submit');
+
+                    $("<button id = 'delete-button'type='submit' value='delete'>DELETE</button>").appendTo("form");
+
+
+
+
+
+
+
+
+                },
+                error: function(result) {
+                    alert('error');
+                }
+
+
+            });
+    });
+    });
+</script>
+
 
 {% endblock %}
 </html>

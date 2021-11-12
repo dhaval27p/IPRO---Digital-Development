@@ -1,7 +1,7 @@
 import json
 
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
-from datetime import timedelta
+from datetime import timedelta, datetime
 
 from chat import bot
 
@@ -26,6 +26,8 @@ def home():
 @app.route("/signup", methods=["POST", "GET"])
 def signup():
     if request.method =="POST":
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
         usernm = request.form['username']
         pwd = request.form['password']
         admin = request.form['decision']
@@ -36,16 +38,17 @@ def signup():
             if pwd == request.form['password2']:
                 with open('users.json', "r") as f:
                     data = json.load(f)
-                taken = False
+                #taken = False
                 for _user in range(0, len(data)):
                     if data[_user]['username'] == usernm:
-                        taken = True
+                        #taken = True
                         flash("Username is taken, try different username", "error")
                         return redirect(url_for('signup'))
 
                 #if taken == False:
-
-                _dict = {'username':usernm, "password":pwd, "admin":admin}
+                dateTimeObj = datetime.now().strftime('%Y/%m/%d %I:%M:%S')
+                _dict = {'first-name':firstname, 'last-name':lastname, 'username': usernm, "password":pwd, "admin":admin, "time":str(dateTimeObj)}
+                print(_dict)
                 data.append(_dict)
                 with open('users.json', 'w') as f:
                     json.dump(data,f, indent=4)
@@ -75,7 +78,7 @@ def login():
             pwd = request.form['password']
             with open('users.json') as f:
                 data = json.load(f)
-            user =[]
+            user=None
             idx = 0
             info = False
             for _user in range(0, len(data)):
@@ -126,6 +129,9 @@ def logout():
         flash("You have been logout!", "info")
     session.pop("user_id", None)
     return redirect(url_for("login"))
+
+
+
 @app.route("/admin", methods=['Post', 'GET'])
 def admin_power():
     if request.method == 'POST':
@@ -133,8 +139,22 @@ def admin_power():
             return redirect(url_for('delete_users'))
     return render_template('admin.html')
 
-@app.route("/deleteusers", methods=['Post', 'GET'])
+
+
+@app.route("/deleteuser", methods=['Post', 'GET'])
 def delete_users():
+    if request.method == 'POST':
+        user = request.form['user']
+        with open('users.json') as f:
+            data = json.load(f)
+        for _user in range(0, len(data)):
+            if data[_user]['username'] == user:
+                return jsonify({"firstname": data[_user]['first-name'], "lastname": data[_user]['last-name'],"time": data[_user]['time']})
+        else:
+            return jsonify({"user": "This username doesn't exist"})
     return render_template('delete.html')
+
+
+
 if __name__ == "__main__":
     app.run( debug=True)

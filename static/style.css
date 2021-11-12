@@ -159,6 +159,7 @@
     .forms {
     width:20%;
     margin-left:10%;
+    font-weight: bold;
 
 
   }
@@ -192,3 +193,24 @@ body {
         background-position: 0% 50%;
     }
 }
+    .admin-font{
+    color: white;
+}
+    #after-submit{
+       width: 100%;
+     overflow-wrap: break-word;
+     background-color: black;
+     color: green;
+     border: 2px solid #283747;
+
+
+     height: 25vh;
+     overflow-y: scroll;
+
+    }
+    #delete-button{
+    height:10%;
+    background-color: red;
+
+    }
+
