@@ -20,9 +20,9 @@
   <input type = "submit" value="Sign up">
 {% with messages = get_flashed_messages() %}
     {% if messages %}
-      {% for msg in messages %}
-        <p id="message">{{msg}}</p>
-      {% endfor %}
+
+        <p id="message">{{messages[0]}}</p>
+
     {% endif %}
   {% endwith %}
 </form>

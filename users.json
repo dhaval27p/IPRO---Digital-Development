@@ -1,27 +1,18 @@
 [
     {
-        "username": "Raj",
-        "password": "123",
-        "admin": "yes"
-    },
-    {
-        "username": "Kanu",
+        "first-name": "Raj",
+        "last-name": "Patel",
+        "username": "Pop_skull123JohnWick",
         "password": "123",
         "admin": "yes",
-        "time": "2021-11-11 22:30:55.186979"
+        "time": "2021/11/12 10:16:19"
     },
     {
-        "username": "Kaushal",
-        "password": "123",
-        "admin": "yes",
-        "time": "2021/11/11 10:35:02"
-    },
-    {
-        "first-name": "Pop",
-        "last-name": "Mike",
-        "username": "Pop_MIke",
+        "first-name": "Urvish",
+        "last-name": "Patel",
+        "username": "Urvish_MiniPop",
         "password": "123",
         "admin": "no",
-        "time": "2021/11/11 10:57:39"
+        "time": "2021/11/12 10:32:29"
     }
 ]

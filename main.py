@@ -13,8 +13,7 @@ app.permanent_session_lifetime = timedelta(days=7)
 def admin(idx):
     with open('users.json', "r") as f:
         data = json.load(f)
-    print(data[idx])
-    print(data[idx]['admin'])
+
     return data[idx]['admin']
 
 
@@ -31,7 +30,7 @@ def signup():
         usernm = request.form['username']
         pwd = request.form['password']
         admin = request.form['decision']
-        if usernm == "":
+        if usernm == "" or lastname== "" or firstname =="" or pwd == "":
             flash("Must complete the forms", "error")
             return redirect(url_for('signup'))
         else:
@@ -53,7 +52,7 @@ def signup():
                 with open('users.json', 'w') as f:
                     json.dump(data,f, indent=4)
                 session.permanent = True
-                session['user_id'] = [usernm, admin]
+                session['user_id'] = [usernm, admin, firstname]
                 return redirect(url_for('chatbot'))
                 #else:
                     #return redirect(url_for('signup'))
@@ -71,13 +70,14 @@ def login():
         return redirect(url_for('home'))
 
     if request.method =="POST":
-        if request.form.get('Sign_up')=='Create User':
+        if request.form.get('Sign_up') == 'Create User':
             return redirect(url_for("signup"))
-        else:
+        elif request.form.get('Sign_up') == 'Login':
             usernm = request.form['username']
             pwd = request.form['password']
             with open('users.json') as f:
                 data = json.load(f)
+            print(data)
             user=None
             idx = 0
             info = False
@@ -94,7 +94,7 @@ def login():
             # user = [x for x in users if x.username == usernm][0]
             elif user and data[idx]['password'] == pwd:
                 session.permanent=True
-                session['user_id']=[user,admin(idx)]
+                session['user_id']=[user,admin(idx), data[idx]['first-name'] ]
                 print(session['user_id'][1])
 
 
@@ -110,7 +110,7 @@ def chatbot():
 
     if 'user_id' in session:
 
-        user = session['user_id'][0]
+        user = session['user_id'][2]
         if request.method == 'POST':
             the_question = request.form['question']
             response = bot(the_question)
@@ -134,26 +134,57 @@ def logout():
 
 @app.route("/admin", methods=['Post', 'GET'])
 def admin_power():
-    if request.method == 'POST':
-        if request.form['admin'] == "Delete Users":
-            return redirect(url_for('delete_users'))
-    return render_template('admin.html')
+    if 'user_id' in session and session['user_id'][1]=="yes":
+        user = session['user_id'][2]
+        if request.method == 'POST':
+            if request.form['admin'] == "Delete Users":
+                return redirect(url_for('delete_users'))
+        return render_template('admin.html', user=user)
+    else:
+        flash("You are not logged in", "Warning")
+        return redirect(url_for("login"))
 
+def user_idx(user):
+    with open('users.json') as f:
+        data = json.load(f)
 
+    print(data[0])
+    for _user in range(0, len(data)):
+        if data[_user]['username'] == user:
+            return _user
+    else:
+        return None
 
 @app.route("/deleteuser", methods=['Post', 'GET'])
 def delete_users():
-    if request.method == 'POST':
-        user = request.form['user']
-        with open('users.json') as f:
-            data = json.load(f)
-        for _user in range(0, len(data)):
-            if data[_user]['username'] == user:
-                return jsonify({"firstname": data[_user]['first-name'], "lastname": data[_user]['last-name'],"time": data[_user]['time']})
-        else:
-            return jsonify({"user": "This username doesn't exist"})
-    return render_template('delete.html')
+    if 'user_id' in session and session['user_id'][1] == "yes":
+        user = session['user_id'][2]
 
+        if request.method == 'POST':
+            with open('users.json') as f:
+                data = json.load(f)
+            print(request.form.get('submit-buttons'))
+            if request.form.get('submit-buttons') == 'delete':
+                user = request.form['user']
+                _user = user_idx(user)
+                names = data[_user]['username']
+                del data[_user]
+                with open('users.json', 'w') as f:
+                    json.dump(data, f, indent=4)
+                flash("Deleted")
+                return redirect(url_for('delete_users', name='names'))
+            else:
+                user = request.form['user']
+                _user = user_idx(user)
+                if _user is not None:
+                    return jsonify({"firstname": data[_user]['first-name'], "lastname": data[_user]['last-name'], "time": data[_user]['time']})
+                elif _user is None:
+                    return jsonify({"user": "This username doesn't exist"})
+        return render_template('delete.html', user=user)
+
+    else:
+        flash("You are not logged in", "Warning")
+        return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

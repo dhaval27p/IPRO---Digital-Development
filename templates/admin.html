@@ -3,7 +3,9 @@
 {% extends "template.html" %}
 {% block title %} Admin {% endblock%}
 {% block content %}
+<h1 style="text-align: center;"><l id= 'admin-font'>Enjoy the Admin SuperPower,  {{user}}</l> </h1>
 <div class="log_container" >
+
     <form method = 'post'>
         <button type = 'submit' name="admin" value="Delete Users">Delete Users</button>
         <button type="submit" name="admin" value="Update ChatBot">Update ChatBot</button>
