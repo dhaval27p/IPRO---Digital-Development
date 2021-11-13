@@ -57,7 +57,7 @@
                         lastname = result.lastname;
                         time = result.time;
                         user = result.user;
-
+                        admin = result.admin;
 
 
 
@@ -67,8 +67,10 @@
 
                             $('#after-submit').empty();
                             $('#deletebutton').remove();
-                            if (user === "This username doesn't exist"){
-                                    $("<div id = 'after-div'>"+user+"</div>").appendTo('#after-submit');}
+                            if (admin === "Can't delete other admins"){
+                                    $("<div id = 'after-div' style='color: red;'>"+admin+"</div>").appendTo('#after-submit');}
+                            else if (user === "This username doesn't exist"){
+                                    $("<div id = 'after-div' style='color: yellow;'>"+user+"</div>").appendTo('#after-submit');}
                             else{
                                     $("<div id = 'after-div'>First name: <label class='admin-font'>"+firstname+"</label><br>Last name: <label class='admin-font'>"+lastname+"</label><br>Created: <label class='admin-font'>"+time+"</label></div>").appendTo('#after-submit');
 
@@ -76,8 +78,10 @@
                                     }
                         }
                         else{
-                            if (user === "This username doesn't exist"){
-                                $("<div id = 'after-div'>"+user+"</div>").appendTo('#after-submit');}
+                            if (admin === "Can't delete other admins"){
+                                $("<div id = 'after-div' style='color: red;'>"+admin+"</div>").appendTo('#after-submit');}
+                            else if (user === "This username doesn't exist"){
+                                $("<div id = 'after-div' style='color: yellow;'>"+user+"</div>").appendTo('#after-submit');}
                             else{
                                 $("<div id = 'after-div'>First name: <label class='admin-font'>"+firstname+"</label><br>Last name: <label class='admin-font'>"+lastname+"</label><br>Created: <label class='admin-font'>"+time+"</label></div>").appendTo('#after-submit');
 

@@ -14,5 +14,13 @@
         "password": "123",
         "admin": "no",
         "time": "2021/11/12 10:32:29"
+    },
+    {
+        "first-name": "Urvish",
+        "last-name": "Patel",
+        "username": "MiniPop",
+        "password": "123",
+        "admin": "yes",
+        "time": "2021/11/12 10:32:39"
     }
 ]

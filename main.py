@@ -151,9 +151,12 @@ def user_idx(user):
     print(data[0])
     for _user in range(0, len(data)):
         if data[_user]['username'] == user:
-            return _user
+            if data[_user]['admin']=='no':
+                return _user
+            else:
+                return -1
     else:
-        return None
+        return -2
 
 @app.route("/deleteuser", methods=['Post', 'GET'])
 def delete_users():
@@ -163,22 +166,25 @@ def delete_users():
         if request.method == 'POST':
             with open('users.json') as f:
                 data = json.load(f)
-            print(request.form.get('submit-buttons'))
+
             if request.form.get('submit-buttons') == 'delete':
                 user = request.form['user']
                 _user = user_idx(user)
-                names = data[_user]['username']
+
                 del data[_user]
                 with open('users.json', 'w') as f:
                     json.dump(data, f, indent=4)
                 flash("Deleted")
-                return redirect(url_for('delete_users', name='names'))
+                return redirect(url_for('delete_users'))
             else:
                 user = request.form['user']
                 _user = user_idx(user)
-                if _user is not None:
+                print(_user)
+                if _user >= 0:
                     return jsonify({"firstname": data[_user]['first-name'], "lastname": data[_user]['last-name'], "time": data[_user]['time']})
-                elif _user is None:
+                elif _user == -1:
+                    return jsonify({"admin": "Can't delete other admins"})
+                else:
                     return jsonify({"user": "This username doesn't exist"})
         return render_template('delete.html', user=user)
 

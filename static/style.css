@@ -209,6 +209,11 @@ body {
      overflow-y: scroll;
 
     }
+    #after-div{
+    width: 90%;
+    overflow-wrap: break-word;
+
+    }
     #delete-button{
     height:10%;
     background-color: red;
