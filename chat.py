@@ -54,8 +54,10 @@ def bot(msg):
     else:
         default = 'I do not understand your question?'
         data2 = msg
-        with open('unanswered_questions.json', 'w', encoding='utf-8') as f:
-            json.dump(data2, f, ensure_ascii=False, indent=4)
+        with open('unanswered_questions.json', 'a', encoding='utf-8') as f:
+            f.write(json.dumps(data2))
+            f.write("\n")
+            f.close()
         return default
 
 

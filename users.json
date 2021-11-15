@@ -30,5 +30,13 @@
         "password": "1234",
         "admin": "no",
         "time": "2021/11/14 07:22:12"
+    },
+    {
+        "first-name": "Dhaval",
+        "last-name": "P",
+        "username": "Dhaval",
+        "password": "123",
+        "admin": "yes",
+        "time": "2021/11/15 12:16:42"
     }
 ]
