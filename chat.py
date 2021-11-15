@@ -1,8 +1,13 @@
 import random
 import json
 import torch
+import csv
+
+from flask import flash
+
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+from datetime import timedelta, datetime
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -47,5 +52,11 @@ def bot(msg):
                 x = random.choice(intent["responses"])
                 return x
     else:
-        default = "I do not understand your question?"
+        default = 'I do not understand your question?'
+        data2 = msg
+        with open('unanswered_questions.json', 'w', encoding='utf-8') as f:
+            json.dump(data2, f, ensure_ascii=False, indent=4)
         return default
+
+
+
