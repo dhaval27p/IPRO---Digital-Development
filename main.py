@@ -62,7 +62,6 @@ def signup():
     return render_template("signup.html")
 
 
-
 @app.route("/login", methods=['Post', 'GET'])
 def login():
     if "user_id" in session:
@@ -104,7 +103,6 @@ def login():
     return render_template('login.html')
 
 
-
 @app.route('/chat', methods=["GET", "POST"])
 def chatbot():
 
@@ -122,6 +120,7 @@ def chatbot():
         flash("You are not logged in", "Warning")
         return redirect(url_for("login"))
 
+
 @app.route('/logout')
 def logout():
     if 'user_id' in session:
@@ -131,7 +130,6 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 @app.route("/admin", methods=['Post', 'GET'])
 def admin_power():
     if 'user_id' in session and session['user_id'][1]=="yes":
@@ -139,10 +137,13 @@ def admin_power():
         if request.method == 'POST':
             if request.form['admin'] == "Delete Users":
                 return redirect(url_for('delete_users'))
+            if request.form['admin'] == "Update ChatBot":
+                return redirect(url_for('update_intents'))
         return render_template('admin.html', user=user)
     else:
         flash("You are not logged in", "Warning")
         return redirect(url_for("login"))
+
 
 def user_idx(user):
     with open('users.json') as f:
@@ -157,6 +158,7 @@ def user_idx(user):
                 return -1
     else:
         return -2
+
 
 @app.route("/deleteuser", methods=['Post', 'GET'])
 def delete_users():
@@ -191,6 +193,17 @@ def delete_users():
     else:
         flash("You are not logged in", "Warning")
         return redirect(url_for("login"))
+
+
+@app.route("/updateintents", methods=['Post', 'GET'])
+def update_intents():
+    with open('intents.json', 'r') as f:
+        file = json.load(f)
+    if request.method =="POST":
+        tag = request.form['tag']
+        pattern = request.form['pattern']
+        response = request.form['response']
+    return render_template("update.html", data=file)
 
 
 if __name__ == "__main__":

@@ -38,5 +38,13 @@
         "password": "123",
         "admin": "yes",
         "time": "2021/11/15 12:16:42"
+    },
+    {
+        "first-name": "Rutvik",
+        "last-name": "Patel",
+        "username": "rutvik",
+        "password": "123",
+        "admin": "yes",
+        "time": "2021/11/15 04:25:21"
     }
 ]
