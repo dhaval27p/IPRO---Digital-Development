@@ -1,12 +1,13 @@
 
     #logout{
         display:none;
-
+        float: right;
     }
 
-    #logout{
-        float: right;
 
+    #login{
+        display: none;
+        float: right;
     }
 
     #admin{
