@@ -29,7 +29,7 @@ def signup():
         lastname = request.form['lastname']
         usernm = request.form['username']
         pwd = request.form['password']
-        admin = request.form['decision']
+        admin = 'no'
         if usernm == "" or lastname== "" or firstname =="" or pwd == "":
             flash("Must complete the forms", "error")
             return redirect(url_for('signup'))
