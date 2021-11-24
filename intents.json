@@ -12,8 +12,7 @@
                 "Hey",
                 "Welcome to the nltk chat bot. How can I help you?",
                 "Hello, how can I help you?",
-                "What can I help you with?",
-                "Buddy"
+                "What can I help you with?"
             ]
         },
         {
@@ -28,21 +27,6 @@
                 "Have a wonderful day.",
                 "Hope I resolved your issue today. Have a good day.",
                 "Have a nice day"
-            ]
-        },
-        {
-            "tag": "satisfy",
-            "patterns": [
-                "Thank you",
-                "Thanks a lot",
-                "You the best"
-            ],
-            "responses": [
-                "No problem, boss",
-                "It's my job",
-                "You're welcome",
-                "Anytime",
-                "Is there anything I can help you with?"
             ]
         },
         {
@@ -122,7 +106,7 @@
                 "attendance information"
             ],
             "responses": [
-                "\u2022\tOn the third absence your course grade will drop one letter grade\n\u2022\tOn the fifth absence your course grade will drop another letter grade\n\u2022\tOn each of sixth and seventh absence your course grade will drop another letter grade\n\u2022\tIf you are more than 20 minutes late you will be counted as absent\n",
+                "On the third absence your course grade will drop one letter grade. On the fifth absence your course grade will drop another letter grade. On each of sixth and seventh absence your course grade will drop another letter grade. If you are more than 20 minutes late you will be counted as absent.",
                 "After 3 absences your grade drops one letter grade.",
                 "After 3 absences, your grade drops one letter grade and after a fifth absence another letter grade.",
                 "Three absences drops one letter grade and after the fifth, another letter grade"
@@ -164,7 +148,7 @@
                 "What will I learn in this course"
             ],
             "responses": [
-                "\n\u2022\tUsing Scrum as the overall process for software development\n\u2022\tCollaboratively work with other students in building a combined digital service\n\u2022\tLearn how to work effectively as a team and improve process, tools and techniques to iterative improve team satisfaction, performance and effectiveness\n\u2022\tIncrementally deliver a more complete offering week-over-week throughout the quarter\n",
+                "Using Scrum as the overall process for software development. Collaboratively work with other students in building a combined digital service. Learn how to work effectively as a team and improve process, tools and techniques to iterative improve team satisfaction, performance and effectiveness. Incrementally deliver a more complete offering week-over-week throughout the quarter.",
                 "Using Scrum, collaborating with teams using Github, Slack and more",
                 "Software Development, Scrum, and Team Building",
                 "Collaboratively working together in a series of one-week sprints for the duration building software as part of a distributed team using tools like Github, Slack, screen sharing and virtual whiteboards and using scrum and Kanban boards to facilitate and orchestrate your team's efforts."
@@ -205,11 +189,6 @@
                 "Any programming language",
                 "You don't need any requirements besides a knowledge of any programming language"
             ]
-        },
-        {
-            "tag": "greeting",
-            "patterns": "Hey",
-            "responses": "Buddy"
         }
     ]
 }

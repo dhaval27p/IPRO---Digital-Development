@@ -139,6 +139,8 @@ def admin_power():
                 return redirect(url_for('delete_users'))
             if request.form['admin'] == "Update ChatBot":
                 return redirect(url_for('update_intents'))
+            if request.form['admin'] == "Weekly summary":
+                return redirect(url_for('weekly_updates'))
         return render_template('admin.html', user=user)
     else:
         flash("You are not logged in", "Warning")
@@ -208,6 +210,19 @@ def update_intents():
     else:
         flash("You are not logged in", "Warning")
         return redirect(url_for("login"))
-if __name__ == "__main__":
 
+
+@app.route("/weeklyupdates", methods=['Post', 'GET'])
+def weekly_updates():
+    if 'user_id' in session and session['user_id'][1] == "yes":
+        user = session['user_id'][2]
+        with open('unanswered_questions.json', 'r') as f:
+            file = json.load(f)
+        return render_template("weekly.html", data=file, user= user)
+    else:
+        flash("You are not logged in", "Warning")
+        return redirect(url_for("login"))
+
+
+if __name__ == "__main__":
     app.run(debug=True)

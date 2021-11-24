@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% block title %} Update {% endblock%}
+{% block content %}
+<div>
+    <h1 style="text-align: center", id="title">Current Intents, {{user}}</h1>
+    <ul id="tag">
+        <li>Unanswered Question By Bot:</li>
+        {% for val in data.unaswered_questions %}
+                <ul>
+                    <li>Question: {{ val }}</li>
+                </ul>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+<style>
+    #title{
+        color: red;
+    }
+    #tag{
+        color: white;
+        display: block;
+        padding: 5px;
+        margin-top: 5%;
+        width: 100%;
+        height: 50vh;
+        overflow-y: scroll;
+
+    }
+
+
+</style>
+{% endblock %}
