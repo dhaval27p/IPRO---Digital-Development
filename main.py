@@ -197,13 +197,17 @@ def delete_users():
 
 @app.route("/updateintents", methods=['Post', 'GET'])
 def update_intents():
-    with open('intents.json', 'r') as f:
-        file = json.load(f)
+    if 'user_id' in session and session['user_id'][1] == "yes":
+        user = session['user_id'][2]
+        with open('intents.json', 'r') as f:
+            file = json.load(f)
 
 
-    return render_template("update.html", data=file)
+        return render_template("update.html", data=file, user= user)
 
-
+    else:
+        flash("You are not logged in", "Warning")
+        return redirect(url_for("login"))
 if __name__ == "__main__":
 
     app.run(debug=True)
