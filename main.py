@@ -203,6 +203,22 @@ def update_intents():
         tag = request.form['tag']
         pattern = request.form['pattern']
         response = request.form['response']
+
+        with open('intents.json', "r") as f:
+            data = json.load(f)
+        for n in range(0, len(data['intents'])):
+            if tag == data['intents'][n]['tag']:
+                data['intents'][n]['patterns'].append(pattern)
+                data['intents'][n]['responses'].append(response)
+                print(data['intents'][n])
+        else:
+            data['intents'].append({'tag': tag, 'patterns': pattern, 'responses':response})
+
+        with open('intents.json', 'w') as f:
+            json.dump(data, f, indent=4)
+
+        return redirect(url_for('update_intents'))
+
     return render_template("update.html", data=file)
 
 

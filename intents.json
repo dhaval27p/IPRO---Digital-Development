@@ -1,81 +1,215 @@
 {
-  "intents": [
-    {
-      "tag": "greeting",
-      "patterns": ["Hi", "Hello", "How are you"],
-      "responses": ["Hey", "Welcome to the nltk chat bot. How can I help you?", "Hello, how can I help you?", "What can I help you with?"]
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "Goodbye", "See you later"],
-      "responses": ["See you later, thanks for stopping by.", "Have a wonderful day.",
-      "Hope I resolved your issue today. Have a good day.", "Have a nice day"]
-    },
-    {
-      "tag": "satisfy",
-      "patterns": ["Thank you", "Thanks a lot", "You the best"],
-      "responses": ["No problem, boss", "It's my job",
-      "You're welcome", "Anytime", "Is there anything I can help you with?"]
-    },
-    {
-      "tag": "capabilities",
-      "patterns": ["What can you help me with", "information", "help"],
-      "responses": ["I am able to give you general information about the class such as office hours, the midterm, textbooks, class time, and more", "I can answer questions for you such as: office hours, informationm about the professor, midterm information and more", "I can help with many general questions", "I can provide you with information such as contacting the professor, midterm information, office hours, and more"]
-    },
-    {
-      "tag": "class time",
-      "patterns": ["Class time", "When does class start", "When does class begin"],
-      "responses": ["Class starts at 6:45pm CDT and ends at 9:30pm CDT.", "The syllabus states 6:45pm CDT. Click here to view the syllabus https://blackboard.iit.edu/ultra/courses/_117653_1/cl/outline", "It starts at 6:45pm CDT", "Starts at 6:45pm and ends at 9:30pm"]
-    },
-    {
-      "tag": "office hours",
-      "patterns": ["When is the professor available", "What time are office hours", "Office hours"],
-      "responses": ["Monday & Tuesday: 4:00pm CDT - 5:00pm CDT", "4:00pm - 5:00pm on Monday's and Tuesdays ", "Office hours are Monday and Tuesday 4:00pm-5:00pm", "Office hours are Monday & Tuesday 4:00pm - 5:00pm. If you need time outside of these hours, please email the professor at mschray@iit.edu."]
-    },
-    {
-      "tag": "midterm",
-      "patterns": ["When is the midterm", "Midterm", "What time is the midterm"],
-      "responses": ["The midterm is being held in PH-100 on 11/15/2021 at 9:00am ", "11/15/2021 at 9:00am in Perlstein Hall room 100", "PH-100 on 11/15 at 9:00am", "The midterm will be at 9:00am in Perlstien Hall room 100 on 11/15/21"]
-    },
-    {
-      "tag": "final",
-      "patterns": ["When is the final", "Final", "What time is the final"],
-      "responses": ["The final is held virtually on Zoom Meetings on 11/30/2021 at 6:00pm", "The final is on 11/30/2021 on Zoom Meetings at 6:00pm", "11/20/2021 on Zoom Meetings"]
-    },
-    {
-      "tag": "attendance",
-      "patterns": ["What is the attendance policy ", "attendance policy", "attendance information"],
-      "responses": ["•\tOn the third absence your course grade will drop one letter grade\n•\tOn the fifth absence your course grade will drop another letter grade\n•\tOn each of sixth and seventh absence your course grade will drop another letter grade\n•\tIf you are more than 20 minutes late you will be counted as absent\n", "After 3 absences your grade drops one letter grade.", "After 3 absences, your grade drops one letter grade and after a fifth absence another letter grade.", "Three absences drops one letter grade and after the fifth, another letter grade"]
-    },
-    {
-      "tag": "textbook",
-      "patterns": ["What is the required textbook", "textbook", "required textbook"],
-      "responses": ["There is no required textbook for this class", "No required textbook","A textbook is not required for this course", "No required textbook"]
-    },
-    {
-      "tag": "contact professor",
-      "patterns": ["What is the professor's email", "Professor's email", "Email the professor"],
-      "responses": ["His email is mschray@iit.edu", "mschray@iit.edu", "Email: mschray@iit.edu", "You may email him at mschray@iit.edu"]
-    },
-    {
-      "tag": "objectives",
-      "patterns": ["What are the course objectives", "course objectives", "What will I learn in this course"],
-      "responses": ["\n•\tUsing Scrum as the overall process for software development\n•\tCollaboratively work with other students in building a combined digital service\n•\tLearn how to work effectively as a team and improve process, tools and techniques to iterative improve team satisfaction, performance and effectiveness\n•\tIncrementally deliver a more complete offering week-over-week throughout the quarter\n", "Using Scrum, collaborating with teams using Github, Slack and more", "Software Development, Scrum, and Team Building", "Collaboratively working together in a series of one-week sprints for the duration building software as part of a distributed team using tools like Github, Slack, screen sharing and virtual whiteboards and using scrum and Kanban boards to facilitate and orchestrate your team's efforts."]
-    },
-    {
-      "tag": "grading",
-      "patterns": ["Grading", "How will I be graded", "What is the grading policy"],
-      "responses": ["You will be graded based on attendance and group project", "Three absences will drop grade by a letter grade"]
-    },
-    {
-      "tag": "evaluation",
-      "patterns": ["Evaluation", "How will I be evaluated", "What is the evaluation policy"],
-      "responses": ["You will be evaluated based on Scrum, GitHub, Kanban Board, and Attendance","Scrum, GitHub, Kanban Board, and Attendance"]
-    },
-    {
-      "tag": "requirements",
-      "patterns": ["Requirements", "What requirements are needed for this class","What programming language do I need to know"],
-      "responses": ["Any programming language","You don't need any requirements besides a knowledge of any programming language"]
-    }
-  ]
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "How are you",
+                "Hey"
+            ],
+            "responses": [
+                "Hey",
+                "Welcome to the nltk chat bot. How can I help you?",
+                "Hello, how can I help you?",
+                "What can I help you with?",
+                "Buddy"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "Goodbye",
+                "See you later"
+            ],
+            "responses": [
+                "See you later, thanks for stopping by.",
+                "Have a wonderful day.",
+                "Hope I resolved your issue today. Have a good day.",
+                "Have a nice day"
+            ]
+        },
+        {
+            "tag": "satisfy",
+            "patterns": [
+                "Thank you",
+                "Thanks a lot",
+                "You the best"
+            ],
+            "responses": [
+                "No problem, boss",
+                "It's my job",
+                "You're welcome",
+                "Anytime",
+                "Is there anything I can help you with?"
+            ]
+        },
+        {
+            "tag": "capabilities",
+            "patterns": [
+                "What can you help me with",
+                "information",
+                "help"
+            ],
+            "responses": [
+                "I am able to give you general information about the class such as office hours, the midterm, textbooks, class time, and more",
+                "I can answer questions for you such as: office hours, informationm about the professor, midterm information and more",
+                "I can help with many general questions",
+                "I can provide you with information such as contacting the professor, midterm information, office hours, and more"
+            ]
+        },
+        {
+            "tag": "class time",
+            "patterns": [
+                "Class time",
+                "When does class start",
+                "When does class begin"
+            ],
+            "responses": [
+                "Class starts at 6:45pm CDT and ends at 9:30pm CDT.",
+                "The syllabus states 6:45pm CDT. Click here to view the syllabus https://blackboard.iit.edu/ultra/courses/_117653_1/cl/outline",
+                "It starts at 6:45pm CDT",
+                "Starts at 6:45pm and ends at 9:30pm"
+            ]
+        },
+        {
+            "tag": "office hours",
+            "patterns": [
+                "When is the professor available",
+                "What time are office hours",
+                "Office hours"
+            ],
+            "responses": [
+                "Monday & Tuesday: 4:00pm CDT - 5:00pm CDT",
+                "4:00pm - 5:00pm on Monday's and Tuesdays ",
+                "Office hours are Monday and Tuesday 4:00pm-5:00pm",
+                "Office hours are Monday & Tuesday 4:00pm - 5:00pm. If you need time outside of these hours, please email the professor at mschray@iit.edu."
+            ]
+        },
+        {
+            "tag": "midterm",
+            "patterns": [
+                "When is the midterm",
+                "Midterm",
+                "What time is the midterm"
+            ],
+            "responses": [
+                "The midterm is being held in PH-100 on 11/15/2021 at 9:00am ",
+                "11/15/2021 at 9:00am in Perlstein Hall room 100",
+                "PH-100 on 11/15 at 9:00am",
+                "The midterm will be at 9:00am in Perlstien Hall room 100 on 11/15/21"
+            ]
+        },
+        {
+            "tag": "final",
+            "patterns": [
+                "When is the final",
+                "Final",
+                "What time is the final"
+            ],
+            "responses": [
+                "The final is held virtually on Zoom Meetings on 11/30/2021 at 6:00pm",
+                "The final is on 11/30/2021 on Zoom Meetings at 6:00pm",
+                "11/20/2021 on Zoom Meetings"
+            ]
+        },
+        {
+            "tag": "attendance",
+            "patterns": [
+                "What is the attendance policy ",
+                "attendance policy",
+                "attendance information"
+            ],
+            "responses": [
+                "\u2022\tOn the third absence your course grade will drop one letter grade\n\u2022\tOn the fifth absence your course grade will drop another letter grade\n\u2022\tOn each of sixth and seventh absence your course grade will drop another letter grade\n\u2022\tIf you are more than 20 minutes late you will be counted as absent\n",
+                "After 3 absences your grade drops one letter grade.",
+                "After 3 absences, your grade drops one letter grade and after a fifth absence another letter grade.",
+                "Three absences drops one letter grade and after the fifth, another letter grade"
+            ]
+        },
+        {
+            "tag": "textbook",
+            "patterns": [
+                "What is the required textbook",
+                "textbook",
+                "required textbook"
+            ],
+            "responses": [
+                "There is no required textbook for this class",
+                "No required textbook",
+                "A textbook is not required for this course",
+                "No required textbook"
+            ]
+        },
+        {
+            "tag": "contact professor",
+            "patterns": [
+                "What is the professor's email",
+                "Professor's email",
+                "Email the professor"
+            ],
+            "responses": [
+                "His email is mschray@iit.edu",
+                "mschray@iit.edu",
+                "Email: mschray@iit.edu",
+                "You may email him at mschray@iit.edu"
+            ]
+        },
+        {
+            "tag": "objectives",
+            "patterns": [
+                "What are the course objectives",
+                "course objectives",
+                "What will I learn in this course"
+            ],
+            "responses": [
+                "\n\u2022\tUsing Scrum as the overall process for software development\n\u2022\tCollaboratively work with other students in building a combined digital service\n\u2022\tLearn how to work effectively as a team and improve process, tools and techniques to iterative improve team satisfaction, performance and effectiveness\n\u2022\tIncrementally deliver a more complete offering week-over-week throughout the quarter\n",
+                "Using Scrum, collaborating with teams using Github, Slack and more",
+                "Software Development, Scrum, and Team Building",
+                "Collaboratively working together in a series of one-week sprints for the duration building software as part of a distributed team using tools like Github, Slack, screen sharing and virtual whiteboards and using scrum and Kanban boards to facilitate and orchestrate your team's efforts."
+            ]
+        },
+        {
+            "tag": "grading",
+            "patterns": [
+                "Grading",
+                "How will I be graded",
+                "What is the grading policy"
+            ],
+            "responses": [
+                "You will be graded based on attendance and group project",
+                "Three absences will drop grade by a letter grade"
+            ]
+        },
+        {
+            "tag": "evaluation",
+            "patterns": [
+                "Evaluation",
+                "How will I be evaluated",
+                "What is the evaluation policy"
+            ],
+            "responses": [
+                "You will be evaluated based on Scrum, GitHub, Kanban Board, and Attendance",
+                "Scrum, GitHub, Kanban Board, and Attendance"
+            ]
+        },
+        {
+            "tag": "requirements",
+            "patterns": [
+                "Requirements",
+                "What requirements are needed for this class",
+                "What programming language do I need to know"
+            ],
+            "responses": [
+                "Any programming language",
+                "You don't need any requirements besides a knowledge of any programming language"
+            ]
+        },
+        {
+            "tag": "greeting",
+            "patterns": "Hey",
+            "responses": "Buddy"
+        }
+    ]
 }
